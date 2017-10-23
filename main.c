@@ -10,6 +10,12 @@ char literalsTable[10][10] = {"programa", "leia", "escreva ","se", "senao", "par
 int main(void)
 {
 	
+	lexico();
+	return 0;
+
+
+}
+int lexico(){
 	char ch;
 	char *ch2 =  malloc(1);
 	FILE *arq;
@@ -34,25 +40,6 @@ int main(void)
 		printf("Existem %d linhas no arquivo\n", num);
 	
 			
-	fclose(arq);
-	
-	return 0;
-
-}
-int lexico(){
-	char ch;
-	int num=0;
-	FILE *arq;
-	
-	arq = fopen(path, "r");
-	if(arq == NULL)
-			printf("Erro, nao foi possivel abrir o arquivo\n");
-	else
-		while( (ch=fgetc(arq))!= EOF )
-			if(ch == '\n')
-			  num++;
-	
-	
 	fclose(arq);
 	
 	return 0;
