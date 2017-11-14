@@ -10,11 +10,16 @@ int num = 0;
 int i = 0;
 int il = 0;
 int lineCount =0;
-int lineSizeCount;
+int lineSizeCount[][250];
 char path[]="test.txt";
 char literalsTable[10][10] = {"programa", "leia", "escreva ","se", "senao", "para", "inteiro", "caractere","real", "fim"};
 //char identificadores = { ""}
-
+int programa(){
+	int j=0;
+	for(j=7;j<i;j+8){
+		if(j!=)
+	}
+}
 int main(void)
 {	FILE *arq;
 	char *ch2 ;//= malloc(1);
@@ -53,11 +58,20 @@ void lexico(FILE *arq){
 			ch2 = realloc(ch2, i+1);
 		}while((ch=fgetc(arq))!= EOF );
 		if(ch==EOF){
-			printf("|\t linha: |%d|", il);
+			printf("|\t linha: |%d|",(il++)+1);
 		}
-		//for(j=0;j<i;j++){
-		//	printf("%c", ch2[j]);
-		//}
+		
+		for(j=0;j<i;j++){
+			//printf("%c", ch2[j]);
+			if(j<8){
+				if(ch2[j]!=literalsTable[0][j]){
+					printf("erro! o codigo deve comecar com a entrada \"programa\"");
+					exit(0);
+				}	
+			}else{
+				if()
+			}
+		}
 	
 		c= ch2;
 		
